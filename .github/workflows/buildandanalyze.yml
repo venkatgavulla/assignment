@@ -33,7 +33,11 @@ jobs:
       - name: Build
         run: ./gradlew build -x test
       - name: Test
-        run: ./gradlew test
+        run: ./gradlew test 
+      - name: Run Coverage
+        run: |
+          chmod +x gradlew
+          ./gradlew build jacocoTestReport
       - name: Jacoco archive
         uses: actions/upload-artifact@v4
         with:
