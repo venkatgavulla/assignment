@@ -12,4 +12,9 @@ class DemoApplicationTests {
 		Assert.isTrue(true, "asserted to true");
 	}
 
+	@Test
+	void testfails() {
+		Assert.isTrue(false, "asserted to false when expecting true");
+	}
+
 }
